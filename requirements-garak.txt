@@ -1,0 +1,4 @@
+garak==0.17.1
+azure-ai-projects>=2.3.0
+azure-identity>=1.17.0
+python-dotenv>=1.0.0

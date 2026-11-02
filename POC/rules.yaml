@@ -1,0 +1,50 @@
+# Review rules for the sample mortgage note.
+# Each rule is sent to the AI separately, along with the document text.
+# The AI must answer: pass / fail / unsure, plus an exact quote and the page as evidence.
+
+rules:
+  - id: R01
+    name: Borrower names present
+    rule: The full legal names of the borrower and any co-borrower are stated.
+
+  - id: R02
+    name: Complete property address
+    rule: The property address includes street, city, state, and ZIP code.
+
+  - id: R03
+    name: Core loan terms stated
+    rule: The principal loan amount, interest rate, and loan term are all stated.
+
+  - id: R04
+    name: Monthly payment consistent
+    rule: >
+      The monthly principal and interest payment amount is the same everywhere
+      it appears in the document.
+
+  - id: R05
+    name: Late charge within policy
+    rule: >
+      The late charge is no more than 5% of the overdue payment, and the grace
+      period before a late charge applies is at least 15 days.
+
+  - id: R06
+    name: No prepayment penalty
+    rule: The borrower may prepay the loan at any time without any prepayment charge or penalty.
+
+  - id: R07
+    name: Closing cost total correct
+    rule: The total closing costs equal the sum of the individual closing cost line items.
+
+  - id: R08
+    name: Escrow described
+    rule: The document describes an escrow for both property taxes and homeowner's insurance.
+
+  - id: R09
+    name: All borrowers signed and dated
+    rule: Every borrower and co-borrower has signed the document and each signature is dated.
+
+  - id: R10
+    name: Appraisal disclosure
+    rule: >
+      The document states that the borrower has the right to receive a copy of
+      the appraisal.

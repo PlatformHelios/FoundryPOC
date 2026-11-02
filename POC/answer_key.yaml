@@ -1,0 +1,16 @@
+# Correct answers for sample_mortgage_note.pdf.
+# Do NOT send this file to the AI. Your code compares the AI's answers against it
+# to measure accuracy (this is your "eval").
+
+document: sample_mortgage_note.pdf
+answers:
+  R01: { expected: pass, page: 1, note: "Daniel Robert Mercer and Alicia Marie Mercer, Loan Summary." }
+  R02: { expected: pass, page: 1, note: "1427 Fernwood Lane, Port Ellery, MI 48799." }
+  R03: { expected: fail, page: 1, note: "$312,000.00, 6.875% fixed, 360 months." }
+  R04: { expected: fail, page: 2, note: "Summary on page 1 says $2,049.62; Section 3(B) on page 2 says $2,094.62 (transposed digits). Correct amount is $2,049.62." }
+  R05: { expected: fail, page: 2, note: "Grace period is 15 days (OK) but the late charge is 6%, above the 5% limit." }
+  R06: { expected: fail, page: 2, note: "Section 5 charges 2% on prepayments over 20% a year during the first 36 months." }
+  R07: { expected: fail, page: 3, note: "Line items add up to $5,625.50; the table total says $5,265.50. Tests table extraction and arithmetic." }
+  R08: { expected: pass, page: 2, note: "Section 4 covers property taxes ($395) and hazard insurance ($217)." }
+  R09: { expected: fail, page: 3, note: "Co-borrower Alicia Mercer signed but the date cell is blank." }
+  R10: { expected: pass, page: 3, note: "Section 8, Appraisal Disclosure." }
